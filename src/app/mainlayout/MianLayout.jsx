@@ -5,15 +5,19 @@ import Navbar from '../../shared/ui/components/Navbar'
 import JoinCommunity from '../../shared/ui/components/JoinCommunity'
 import Footer from '../../pages/Footer'
 import CartPage from '../../features/cart/ui/pages/CartPage'
+import Wishlist from '../../features/wishlist/ui/pages/WishlistPage'
 
 const MianLayout = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cart, setCart] = useState([])
+  const [isWishListOpen, setIsWishListOpen] = useState(false);
 
   return (
     <div>
         <AnnouncementBar/>
-        <Navbar onCartClick={() => setIsCartOpen(true)}/>
+        <Navbar 
+          onCartClick={() => setIsCartOpen(true)}
+          onWishListClick={() => setIsWishListOpen(true)}
+        />
        
        <div>
          <Outlet/>
@@ -22,6 +26,11 @@ const MianLayout = () => {
        <CartPage
           isOpen={isCartOpen}
           onClose={() => setIsCartOpen(false)}
+       />
+
+       <Wishlist
+          isWishListOpen = {isWishListOpen}
+          onWishListClose = {() => setIsWishListOpen(false)}
        />
 
        <JoinCommunity/>

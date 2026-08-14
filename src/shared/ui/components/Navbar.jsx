@@ -4,9 +4,16 @@ import useHooks from "../../hooks/useHooks";
 import NavItem from "../../reusable/NavItem";
 import { NavLink } from "react-router-dom";
 
-const Navbar = ({onCartClick}) => {
+const Navbar = ({onCartClick, onWishListClick}) => {
+  // const {cart} = useContext(MyStore)
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const {navigate} = useHooks()
+  const {navigate, itemNum} = useHooks()
+
+  // const itemNum = () => {
+  //   return cart.length
+  // }
+
 
   return (
     <header className="w-full bg-white border-b border-gray-200">
@@ -50,15 +57,15 @@ const Navbar = ({onCartClick}) => {
             <User size={19} strokeWidth={1.5} />
           </button>
 
-          <button onClick={() => navigate('/wishlist')} className="hover:opacity-50 transition cursor-pointer">
+          <button onClick={onWishListClick} className="hover:opacity-50 transition cursor-pointer">
             <Heart size={19} strokeWidth={1.5} />
           </button>
 
           <button onClick={onCartClick}  className="relative hover:opacity-50 transition cursor-pointer">
             <ShoppingBag size={19} strokeWidth={1.5} />
 
-            <span className="absolute -top-2 -right-2 text-[9px]">
-              0
+            <span  className="absolute -top-2 -right-2 text-[9px]">
+              {itemNum()}
             </span>
           </button>
         </div>

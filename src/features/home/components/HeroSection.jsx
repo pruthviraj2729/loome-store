@@ -3,21 +3,21 @@ import React from "react";
 const panels = [
   {
     key: "man",
-    title: "Uomo",
+    title: "Men",
     copy:
       "Loome's men's collections range from refined elegance to everyday comfort. Each piece is the result of ongoing research and experimentation, with a particular focus on quality and creative treatments. A Made in India concept for the man who appreciates details and versatility.",
       image:
       "https://www.robertocollina.com/cdn/shop/files/Collina_SS26_28_3.jpg?v=1782831671&width=3840",
-    href: "/collections/uomo",
+    href: "/men",
   },
   {
     key: "woman",
-    title: "Donna",
+    title: "Women",
     copy:
       "Tradizione artigianale e visione contemporanea s'intrecciano in ogni capo delle collezioni donna Roberto Collina. L'attenzione al dettaglio e una costante rilettura degli elementi classici raccontano una femminilità raffinata e consapevole nel segno di un Made in Italy di qualità senza tempo.",
     image:
       "https://www.robertocollina.com/cdn/shop/files/Collina_SS26_28_HOME.jpg?v=1782831672&width=3840",
-    href: "/collections/donna",
+    href: "/women",
   },
 ];
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
                 href={panel.href}
                 className="col-start-1 row-start-2 self-end text-sm underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-white"
               >
-                Vedi tutto
+                See All
               </a>
             </div>
           </div>

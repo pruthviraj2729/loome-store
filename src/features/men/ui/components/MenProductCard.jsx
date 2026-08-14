@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { Heart, Plus } from "lucide-react";
-import { useWomenProductDetailHook, useWomenProductsHook } from "../../hooks/useWomenProductsHook";
 import { useNavigate } from "react-router-dom";
 import { MyStore } from "../../../../context/contextApi";
-import { useWishlistHook } from "../../hooks/useWishlistHook";
+import { useWishlistHook } from "../../../women/hooks/useWishlistHook";
 
-const WomenProductCard = ({ product }) => {
+
+const MenProductCard = ({ product }) => {
 
   const navigate = useNavigate()
   const {addToCart, addToWishList, wishList} = useContext(MyStore)
@@ -139,4 +139,4 @@ const WomenProductCard = ({ product }) => {
   );
 };
 
-export default WomenProductCard;
+export default MenProductCard;

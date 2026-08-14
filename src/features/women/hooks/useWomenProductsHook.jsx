@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { WomenProductDetail, WomenProductsApi } from "../api/WomenProuctsApi";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+
 
 
 export const useWomenProductsHook = () => {
@@ -30,3 +31,4 @@ export const useWomenProductDetailHook = (id) => {
         error,
     }
 }
+

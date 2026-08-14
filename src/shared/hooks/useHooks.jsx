@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { MyStore } from '../../context/contextApi'
 
 const useHooks = () => {
     const navigate = useNavigate()
-    // const navlink = NavLink()
+    const {cart} = useContext(MyStore)
+    
+    const itemNum = () => {
+      return cart.length
+    }
+
   return {
     navigate,
+    itemNum,
   }
 }
 
