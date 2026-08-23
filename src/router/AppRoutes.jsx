@@ -16,7 +16,7 @@ import NewInPage from "../features/new/ui/pages/newInPage";
 
 const router = createBrowserRouter([
     {
-        element: <MianLayout/>,
+        element: <MianLayout/>, 
         children: [
             {
                 path: '/',

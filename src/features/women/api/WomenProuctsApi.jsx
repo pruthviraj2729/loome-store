@@ -10,15 +10,6 @@ export const WomenProductsApi = async() => {
 }
 
 
-// export const WomenProductDetail = async(id) => {
-//     try {
-//         const res = await axiosInstence.get(`/products/${id}`)
-//         return res.data        
-//     } catch (error) {
-//         console.log("error in women product detail api", error)
-//     }
-// }
-
 export const WomenProductDetail = async (id) => {
   try {
     const res = await axiosInstence.get(`/products/${id}`);
