@@ -12,7 +12,7 @@ import ContactPage from "../pages/ContactPage";
 import WomenProductDetailPage from "../features/women/ui/pages/WomenProductDetailPage";
 import CashmereCarePage from "../features/headcare/ui/pages/CashmerePage";
 import KniteWearPage from "../features/knitewer/KniteWearPage";
-import NewInPage from "../features/new/ui/pages/newInPage";
+import NewInPage from "../features/new/ui/pages/NewInPage";
 
 const router = createBrowserRouter([
     {
