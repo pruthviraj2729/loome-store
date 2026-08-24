@@ -77,7 +77,7 @@ const Navbar = ({ onCartClick, onWishListClick }) => {
 
           {/* USER */}
 
-          <button className="cursor-pointer transition hover:opacity-50">
+          <button onClick={() => navigate('/login')} className="cursor-pointer transition hover:opacity-50">
             <User
               size={19}
               strokeWidth={1.5}

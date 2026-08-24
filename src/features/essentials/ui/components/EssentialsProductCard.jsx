@@ -109,12 +109,12 @@ const EssentialsProductCard = ({ product }) => {
         <div className="mt-1 flex items-center gap-2 text-[13px]">
 
           <span>
-            €{product.price.toFixed(2)}
+            ${product.price.toFixed(2)}
           </span>
 
           {hasDiscount && (
             <span className="text-gray-400 line-through">
-              €{originalPrice.toFixed(2)}
+              ${originalPrice.toFixed(2)}
             </span>
           )}
 

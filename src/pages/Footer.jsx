@@ -1,10 +1,13 @@
 import React from "react";
 import {
-//   Instagram,
-//   Facebook,
   ArrowUpRight,
 } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { NavLink } from "react-router-dom";
+
+
+
 
 const Footer = () => {
   return (
@@ -30,21 +33,16 @@ const Footer = () => {
             </p>
 
             {/* Social */}
-            {/* <div className="mt-8 flex items-center gap-5">
+            <div className="mt-8 flex items-center gap-5">
               <a
-                href="#"
+                href="https://www.instagram.com/pruthvirajchavhan._/"
+                 target="_blank"
                 className="transition-opacity hover:opacity-50"
               >
-                <Instagram size={18} strokeWidth={1.4} />
+                <FontAwesomeIcon icon={faInstagram} size="lg" />
               </a>
 
-              <a
-                href="#"
-                className="transition-opacity hover:opacity-50"
-              >
-                <Facebook size={18} strokeWidth={1.4} />
-              </a>
-            </div> */}
+            </div>
           </div>
 
 

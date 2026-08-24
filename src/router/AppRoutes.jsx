@@ -13,10 +13,17 @@ import WomenProductDetailPage from "../features/women/ui/pages/WomenProductDetai
 import CashmereCarePage from "../features/headcare/ui/pages/CashmerePage";
 import KniteWearPage from "../features/knitewer/KniteWearPage";
 import NewInPage from "../features/new/ui/pages/NewInPage";
+import CheckoutPage from "../pages/CheckoutPage";
+import AntumPage from "../features/antum/ui/page/AntumPage";
+import LoginPage from "../features/auth/ui/pages/LoginPage";
 const router = createBrowserRouter([
     {
         element: <MianLayout/>, 
         children: [
+            {
+                path:'login',
+                element: <LoginPage/>
+            },
             {
                 path: '/',
                 element: <HomePage/>
@@ -57,14 +64,6 @@ const router = createBrowserRouter([
                 path: '/headcare/cashmere',
                 element: <CashmereCarePage/> 
             },
-            // {
-            //     path: '/wishlist',
-            //     element: <WishlistPage/>
-            // },
-            // {
-            //     path: '/cart',
-            //     element: <CartPage/>
-            // },
             {
                 path: 'about',
                 element: <AboutPage/>
@@ -73,6 +72,14 @@ const router = createBrowserRouter([
                 path: 'contact',
                 element: <ContactPage/>
             },
+            {
+                path: 'checkout',
+                element: <CheckoutPage/>
+            },
+            {
+                path: 'antum',
+                element: <AntumPage/>
+            }
 
         ]
     }

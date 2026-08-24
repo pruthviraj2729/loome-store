@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { X, Minus, Plus, ShoppingBag } from "lucide-react";
 import { MyStore } from "../../../../context/contextApi";
+import useCartHook from "../../hooks/useCartHook";
 
 const CartPage = ({ isOpen, onClose = [] }) => {
   const {cart, decreaseQuantity, increaseQuantity, removeFromCart} = useContext(MyStore)
+  const { navigate } = useCartHook()
   const subtotal = cart.reduce(
     (total, item) => total + item.price * item.quantity,
     0
@@ -138,7 +140,7 @@ const CartPage = ({ isOpen, onClose = [] }) => {
               Shipping and taxes calculated at checkout.
             </p>
 
-            <button className="mt-6 h-14 w-full bg-black text-sm uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-80">
+            <button onClick={() => navigate('/checkout')} className="mt-6 h-14 w-full bg-black text-sm uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-80">
               Checkout
             </button>
 

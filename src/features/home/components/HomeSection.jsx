@@ -95,9 +95,7 @@ const Home = () => {
             </h2>
           </div>
 
-          <button className="hidden border-b border-black pb-1 text-xs tracking-[0.2em] uppercase md:block">
-            View all
-          </button>
+ 
 
         </div>
 
@@ -105,7 +103,7 @@ const Home = () => {
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
 
           {/* Men */}
-          <div onClick={() => navigate('/men')} className="group relative h-[550px] overflow-hidden">
+          <div onClick={() => navigate('/men')} className="group relative h-[550px] overflow-hidden cursor-pointer">
 
             <img
               src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=1000&q=80"
@@ -129,7 +127,7 @@ const Home = () => {
 
 
           {/* Women */}
-          <div onClick={() => navigate('/women')} className="group relative h-[550px] overflow-hidden">
+          <div onClick={() => navigate('/women')} className="group relative h-[550px] overflow-hidden cursor-pointer">
 
             <img
               src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80"
@@ -153,7 +151,7 @@ const Home = () => {
 
 
           {/* Knitwear */}
-          <div onClick={() => navigate('/knitewear')}  className="group relative h-[450px] overflow-hidden">
+          <div onClick={() => navigate('/knitewear')}  className="group relative h-[450px] overflow-hidden cursor-pointer">
 
             <img
               src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=80"
@@ -177,7 +175,7 @@ const Home = () => {
 
 
           {/* New In */}
-          <div onClick={() => navigate('/new')} className="group relative h-[450px] overflow-hidden">
+          <div onClick={() => navigate('/new')} className="group relative h-[450px] overflow-hidden cursor-pointer">
 
             <img
               src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80"
@@ -324,7 +322,7 @@ const Home = () => {
               The new Loome
             </h2>
 
-            <button className="mt-10 border-b border-white pb-2 text-xs tracking-[0.2em] uppercase">
+            <button onClick={() => navigate('/antum')} className="mt-10 border-b border-white pb-2 text-xs tracking-[0.2em] uppercase cursor-pointer">
               Discover collection
             </button>
 
@@ -360,47 +358,8 @@ const Home = () => {
               quality and everyday comfort in mind.
             </p>
 
-            <button onClick={() => navigate('about')} className="mt-10 border-b border-black pb-2 text-xs tracking-[0.2em] uppercase">
+            <button onClick={() => navigate('about')} className="mt-10 border-b border-black pb-2 text-xs tracking-[0.2em] uppercase cursor-pointer">
               Our story
-            </button>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* ================= NEWSLETTER ================= */}
-      <section className="border-t border-neutral-200 bg-[#e9e7e1] px-6 py-28 md:px-12">
-
-        <div className="mx-auto max-w-2xl text-center">
-
-          <p className="mb-5 text-xs tracking-[0.3em] uppercase text-neutral-500">
-            Stay in the loop
-          </p>
-
-          <h2 className="text-3xl font-light md:text-5xl">
-            New collections.
-            <br />
-            New stories.
-          </h2>
-
-          <p className="mt-6 text-sm text-neutral-500">
-            Join the Loome community for new releases and
-            occasional stories from our world.
-          </p>
-
-          <div className="mx-auto mt-10 flex max-w-lg border-b border-black">
-
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 bg-transparent px-2 py-4 text-sm outline-none placeholder:text-neutral-400"
-            />
-
-            <button className="px-3 text-xs tracking-[0.2em] uppercase">
-              →
             </button>
 
           </div>
