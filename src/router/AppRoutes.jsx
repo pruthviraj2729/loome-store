@@ -13,7 +13,6 @@ import WomenProductDetailPage from "../features/women/ui/pages/WomenProductDetai
 import CashmereCarePage from "../features/headcare/ui/pages/CashmerePage";
 import KniteWearPage from "../features/knitewer/KniteWearPage";
 import NewInPage from "../features/new/ui/pages/NewInPage";
-
 const router = createBrowserRouter([
     {
         element: <MianLayout/>, 
@@ -25,7 +24,11 @@ const router = createBrowserRouter([
             {
                 path: '/men',
                 element: <MenPage/>
-            }, 
+            },
+            // {
+            //     path: '/men/products/:id',
+            //     element:<MenProductDetailPage/>
+            // }, 
             {
                 path: '/women',
                 element: <WomenPage/>

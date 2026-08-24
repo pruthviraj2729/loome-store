@@ -1,3 +1,117 @@
+// import { useContext } from "react";
+// import { Heart, Plus } from "lucide-react";
+// import { useNavigate } from "react-router-dom";
+// import { MyStore } from "../../../../context/contextApi";
+// import { useWishlistHook } from "../../hooks/useWishlistHook";
+// import { formatPrice } from "../../../../config/currency";
+
+// const WomenProductCard = ({ product }) => {
+//   const navigate = useNavigate();
+//   const { addToCart, addToWishList } = useContext(MyStore);
+//   const { isWishListed } = useWishlistHook();
+
+//   const hasDiscount = product.discountPercentage > 0;
+
+//   const originalPrice = hasDiscount
+//     ? product.price / (1 - product.discountPercentage / 100)
+//     : product.price;
+
+//   const goToProduct = () => navigate(`/women/products/${product.id}`);
+
+//   return (
+//     <article className="group relative">
+//       {/* IMAGE */}
+//       <div
+//         onClick={goToProduct}
+//         className="relative aspect-[3/4] cursor-pointer overflow-hidden bg-[var(--color-panel)]"
+//       >
+//         <img
+//           src={product.images?.[0]}
+//           alt={product.title}
+//           className="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+//         />
+
+//         {product.images?.[1] && (
+//           <img
+//             src={product.images[1]}
+//             alt={product.title}
+//             className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+//           />
+//         )}
+
+//         {hasDiscount && (
+//           <span className="absolute left-3 top-3 bg-white/90 px-2 py-1 text-[10px] tracking-wide text-[var(--color-ink)]">
+//             -{Math.round(product.discountPercentage)}%
+//           </span>
+//         )}
+
+//         <button
+//           onClick={(e) => {
+//             e.stopPropagation();
+//             addToWishList(product);
+//           }}
+//           aria-label="Add to wishlist"
+//           className="absolute right-3 top-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+//         >
+//           <Heart
+//             size={19}
+//             strokeWidth={1.3}
+//             fill={isWishListed(product) ? "#c0392b" : "none"}
+//             color={isWishListed(product) ? "#c0392b" : "var(--color-ink)"}
+//           />
+//         </button>
+
+//         <button
+//           onClick={(e) => {
+//             e.stopPropagation();
+//             addToCart(product);
+//           }}
+//           className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 bg-white px-5 py-2.5 text-[10px] uppercase tracking-[0.15em] text-[var(--color-ink)] opacity-0 shadow-sm transition-all duration-300 group-hover:opacity-100 hover:bg-[var(--color-ink)] hover:text-white"
+//         >
+//           <Plus size={13} strokeWidth={1.5} />
+//           Quick add
+//         </button>
+//       </div>
+
+//       {/* PRODUCT INFORMATION */}
+//       <div className="pt-4">
+//         <h3
+//           onClick={goToProduct}
+//           className="cursor-pointer text-[13px] font-normal leading-5 text-[var(--color-ink)]"
+//         >
+//           {product.title}
+//         </h3>
+
+//         <div className="mt-1 flex items-center gap-2 text-[13px] text-[var(--color-ink)]">
+//           <span>{formatPrice(product.price)}</span>
+
+//           {hasDiscount && (
+//             <span className="text-[var(--color-ink)]/35 line-through">
+//               {formatPrice(originalPrice)}
+//             </span>
+//           )}
+//         </div>
+
+//         <div className="mt-2 flex items-center justify-between">
+//           <span className="text-[11px] capitalize text-[var(--color-ink)]/50">
+//             {product.category}
+//           </span>
+
+//           <span
+//             className={`text-[11px] ${
+//               product.stock > 0 ? "text-[var(--color-ink)]/40" : "text-[#c0392b]"
+//             }`}
+//           >
+//             {product.stock > 0 ? "In stock" : "Sold out"}
+//           </span>
+//         </div>
+//       </div>
+//     </article>
+//   );
+// };
+
+// export default WomenProductCard;
+
 import React, { useContext } from "react";
 import { Heart, Plus } from "lucide-react";
 import { useWomenProductDetailHook, useWomenProductsHook } from "../../hooks/useWomenProductsHook";
